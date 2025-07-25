@@ -40,6 +40,7 @@ h2 {
 
 img {
   max-height: 200px;
+  max-width: 200px;
   padding-right: 20px;
   border-radius: 20px;
 }
@@ -53,5 +54,12 @@ button {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  img {
+    max-height: 100px;
+    max-width: 100px;
+  }
+
+}
 
 
