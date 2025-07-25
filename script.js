@@ -9,7 +9,6 @@ const fetchApi = (value) => {
   const result = fetch(`https://rickandmortyapi.com/api/character/${value}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       return data;
     });
 
@@ -39,7 +38,6 @@ const buildResultado = (result) => {
     .map((elem) => {
       if (elem.checked === true && (Array.isArray(result[elem.name])) === true) {
         const arrayResult = result[elem.name].join('\r\n');
-        console.log(arrayResult);
         const newElem = document.createElement('p');
         newElem.innerHTML = `${newKeys[elem.name]} : ${arrayResult}`;
         content.appendChild(newElem);
